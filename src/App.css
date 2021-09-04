@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+    font-family: 'Nunito', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a, span, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d8d8d8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+    padding: 50px 0 50px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    margin-right: 20px;
+}
+
+.img-loading {
+    display: flex;
+    justify-content: center;
+}
+
+.loading {
+    animation-name: animaLoad;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    margin-bottom: 30px;
+}
+
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.busca-avancada {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.select-buscar {
+    margin-top: 10px;
+    font-size: 1.3em;
+    padding: 10px 5px;
+    text-transform: capitalize;
+    background: #616161;
+    color: #fff;
+    border-radius: 5px;
+}
+
+@keyframes animaLoad {
+    to {
+        transform: rotate(360deg);
+    }
 }
