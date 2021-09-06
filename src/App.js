@@ -1,8 +1,8 @@
 import './App.css';
 import React from 'react'
-import { GlobalStorage } from './GlobalContext';
-import Header from './Header'
-import Pokemon from './Pokemon';
+import { GlobalStorage } from './Components/GlobalContext';
+import Header from './Components/Header'
+import Pokemon from './Components/Pokemon';
 
 function App() {
 

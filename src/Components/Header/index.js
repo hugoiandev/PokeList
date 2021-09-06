@@ -1,6 +1,6 @@
 import React from 'react'
-import { GlobalContext } from './GlobalContext'
-import Buscar from './Buscar'
+import { GlobalContext } from '../GlobalContext'
+import Buscar from '../Buscar'
 
 const Header = () => {
     const global = React.useContext(GlobalContext)
@@ -17,7 +17,10 @@ const Header = () => {
                     </input>
                     <a onClick={(event) => {
                         event.preventDefault()
-                        global.fetchApi(`https://pokeapi.co/api/v2/pokemon/${elementCurrent.value}`)
+                        global.setStatusSelect()
+                        global.setDadosPoke([])
+                        global.fetchApi(`https://pokeapi.co/api/v2/pokemon/${elementCurrent.value.toLowerCase()}`)
+                        global.setStatusBtn(false)
                     }} href='/' style={{position: 'relative', left: '-20px', zIndex: '0', background: 'tomato', padding: '5px 40px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottomRightRadius: '20px', borderTopRightRadius: '20px'}}>
                         <img style={{height: '30px,', width: '30px'}} src='pesquisar.svg' alt='pesquisar'></img>
                     </a>

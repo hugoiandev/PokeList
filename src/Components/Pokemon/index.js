@@ -1,5 +1,5 @@
 import React from 'react'
-import { GlobalContext } from './GlobalContext'
+import { GlobalContext } from '../GlobalContext'
 
 const Pokemon = () => {
     const global = React.useContext(GlobalContext)
