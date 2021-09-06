@@ -7,23 +7,30 @@ const GlobalStorage = ({children}) => {
     const [dados, setDados] = React.useState(null)
     const [dadosPoke, setDadosPoke] = React.useState([])
     const [load, setLoad] = React.useState(false)
-    const [stateScroll, setStateScroll] = React.useState(0)
     const [activeBusca, setActiveBusca] = React.useState(false)
+    const [statusObserver, setStatusObserver] = React.useState(0)
+    const [statusSelect, setStatusSelect] = React.useState(true)
+    const [statusBtn, setStatusBtn] = React.useState(true)
     const elementObs = React.useRef()
 
-    
-    React.useEffect(() => {
+    const initObserver = () => {
         const observer = new IntersectionObserver((entries) => {
             if (entries.some((entry) => entry.isIntersecting)) {
-                console.log('oi')
-                setStateScroll((stateCurrentScroll) => stateCurrentScroll + 20)
+                if (statusObserver !== null) {
+                    setStatusObserver((setCurrentStatus) => setCurrentStatus + 1)
+                }
             }
         })
-
         observer.observe(elementObs.current)
+    }
 
-        return observer.disconnect(elementObs.current)
-    }, [])
+    React.useEffect(() => {
+        if (statusObserver >= 2 && statusSelect) {
+            nextPage()
+        }
+
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [statusObserver])
     
 
     const fetchApi = async (url) => {
@@ -69,21 +76,19 @@ const GlobalStorage = ({children}) => {
         setDadosPoke(resJson)
     }
 
-    React.useEffect(() => {
-        fetchApi(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${stateScroll}`)
-        
-        //eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [stateScroll])
+    const nextPage = () => {
+        fetchApi(dados.next)
+    }
 
     React.useEffect(() => {
         fetchApiPoke()
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dados])
 
-    // React.useEffect(() => {
-    //     fetchApi('https://pokeapi.co/api/v2/pokemon')
+    React.useEffect(() => {
+        fetchApi('https://pokeapi.co/api/v2/pokemon')
 
-    // }, [])
+    }, [])
 
 
     const types = [
@@ -179,8 +184,6 @@ const GlobalStorage = ({children}) => {
         }
     ]
 
-    console.log(stateScroll)
-
     return (
         <GlobalContext.Provider value={{
             dados,
@@ -193,8 +196,15 @@ const GlobalStorage = ({children}) => {
             setActiveBusca,
             fetchSelect,
             setDadosPoke,
+            nextPage,
+            initObserver,
             elementObs,
-            setStateScroll
+            setStatusObserver,
+            statusObserver,
+            setStatusSelect,
+            statusSelect,
+            statusBtn,
+            setStatusBtn
             }}>
             {children}
         </GlobalContext.Provider>

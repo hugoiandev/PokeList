@@ -37,6 +37,12 @@ const Pokemon = () => {
             </div>
             <div ref={global.elementObs} className='buttons'>
                 {global.load ? <img src='loading.png' alt='loading' className='loading'></img> : null}
+                {global.statusBtn && <button onClick={() => {
+                    global.nextPage()
+                    global.initObserver()
+                    global.setStatusBtn(false)
+                    global.setStatusSelect(true)
+                }}>Ver mais</button>}
             </div>
         </>
     )

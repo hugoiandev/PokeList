@@ -11,9 +11,15 @@ const Buscar = () => {
                 <select onChange={(event) => {
                     global.setDadosPoke([])
                     if (event.target.value === 'All') {
-                        global.setStateScroll(0)
+                        global.setStatusObserver(0)
+                        global.setStatusBtn(true)
+                        global.fetchApi('https://pokeapi.co/api/v2/pokemon')
                     } else {
+                        global.setStatusSelect(false)
+                        global.setStatusBtn(false)
+                        global.setStatusSelect(false)
                         global.fetchSelect(event.target.value)
+                        //global.setStatusObserver(null)
                     }
                     }} defaultValue='All' className='select-buscar'>
                     <option>All</option>
