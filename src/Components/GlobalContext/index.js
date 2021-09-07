@@ -34,46 +34,59 @@ const GlobalStorage = ({children}) => {
     
 
     const fetchApi = async (url) => {
-        setLoad(true)
-        const response = await fetch(url)
-        const json = await response.json()
-        if (Array.isArray(json.results)) {
-            setDados(json)
-        } else {
-            setDadosPoke([json])
+        try {
+            setLoad(true)
+            const response = await fetch(url)
+            const json = await response.json()
+            if (Array.isArray(json.results)) {
+                setDados(json)
+            } else {
+                setDadosPoke([json])
+            }
+            setLoad(false)
+        } catch {
+            console.log(Error('Ocorreu um erro!'))
         }
-        setLoad(false)
     }
 
     const fetchApiPoke = async () => {
-        setLoad(true)
-        let resJson = []
-        if (dados && dados.results.length > 0) {
-            for (let i = 0; i < dados.results.length; i++) {
-                const response = await fetch(dados.results[i].url)
-                const json = await response.json()
-                resJson.push(json)
+        try {
+            setLoad(true)
+            let resJson = []
+            if (dados && dados.results.length > 0) {
+                for (let i = 0; i < dados.results.length; i++) {
+                    const response = await fetch(dados.results[i].url)
+                    const json = await response.json()
+                    resJson.push(json)
+                }
+                setDadosPoke([...dadosPoke, ...resJson])
+                setLoad(false)
             }
-            setDadosPoke([...dadosPoke, ...resJson])
-            setLoad(false)
+        } catch {
+            console.log(Error('Ocorreu um erro!'))
         }
+        
     }
 
     const fetchSelect = async (event) => {
-        setLoad(true)
-        const response = await fetch(`https://pokeapi.co/api/v2/type/${event}`)
-        const json = await response.json()
-        const {pokemon} = json
-        console.log(pokemon)
-        const length = pokemon.length
-        let resJson = []
-        for (let i = 0; i < length; i++) {
-            const response = await fetch(pokemon[i].pokemon.url)
+        try {
+            setLoad(true)
+            const response = await fetch(`https://pokeapi.co/api/v2/type/${event}`)
             const json = await response.json()
-            resJson.push(json)
+            const {pokemon} = json
+            console.log(pokemon)
+            const length = pokemon.length
+            let resJson = []
+            for (let i = 0; i < length; i++) {
+                const response = await fetch(pokemon[i].pokemon.url)
+                const json = await response.json()
+                resJson.push(json)
+            }
+            setLoad(false)
+            setDadosPoke(resJson)
+        } catch {
+            console.log(Error('Ocorreu um erro!'))
         }
-        setLoad(false)
-        setDadosPoke(resJson)
     }
 
     const nextPage = () => {

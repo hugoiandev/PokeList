@@ -31,6 +31,7 @@ const Buscar = () => {
                 </select>
             </div>
         </div>
+        
     )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { GlobalContext } from '../GlobalContext'
 import Buscar from '../Buscar'
+import Topo from './styles'
 
 const Header = () => {
     const global = React.useContext(GlobalContext)
@@ -10,7 +11,7 @@ const Header = () => {
 
     return (
         <>
-            <header style={{background: '#ffffff'}}>
+            <Topo>
                 <div className='container' style={{display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative'}}>
                     <input ref={elementInput} type='text' className='buscar' placeholder='Buscar Pokémon por nome/numero' style={{width: '600px', margin: '0 0 0 20px', padding: '10px', borderRadius: '20px',
                     border: '2px solid #d6d6d6', position: 'relative', zIndex: '1', borderRight: 'none', flex: '1'}}>
@@ -38,7 +39,7 @@ const Header = () => {
                         </ul>
                     </nav>
                 </div>
-            </header>
+            </Topo>
             {global.activeBusca ? <Buscar /> : null}
         </>
     )
