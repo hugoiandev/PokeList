@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Topo = styled.header`
 
     background: #ffffff;
+    padding: 50px 0 50px 0;
 
     div:nth-child(1) {
         display: flex;
@@ -43,6 +44,9 @@ const Topo = styled.header`
     }
 
     div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
         nav {
             ul {
                 li {
@@ -58,7 +62,7 @@ const Topo = styled.header`
                         height: 15px;
                         width: 15px;
                         margin-left: 10px;
-                        transform: {};
+                        transition: .5s;
                     }
                 }
             }

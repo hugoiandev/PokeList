@@ -20,20 +20,22 @@ body {
     margin: 0 auto;
 }
 
-header {
-    padding: 50px 0 50px 0;
-}
-
 .buttons {
     margin-top: 20px;
-    height: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 25px 0;
 }
 
 .buttons button {
-    margin-right: 20px;
+    padding: 15px 50px;
+    border: none;
+    background: tomato;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .img-loading {
@@ -47,29 +49,6 @@ header {
     animation-duration: 1s;
     animation-iteration-count: infinite;
     margin-bottom: 30px;
-}
-
-.pokemons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.busca-avancada {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.select-buscar {
-    margin-top: 10px;
-    font-size: 1.3em;
-    padding: 10px 5px;
-    text-transform: capitalize;
-    background: #616161;
-    color: #fff;
-    border-radius: 5px;
 }
 
 @keyframes animaLoad {

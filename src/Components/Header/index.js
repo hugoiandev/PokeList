@@ -34,7 +34,7 @@ const Header = () => {
                                     global.setActiveBusca(!global.activeBusca)
                                     }}>Pesquisa Avançada
                                 </a>
-                                <img src='seta.svg' alt='seta' style={{height: '15px', width: '15px', marginLeft: '10px', transform: global.activeBusca ? 'rotate(-90deg)' : 'rotate(90deg)', transition: '.5s'}}></img>
+                                <img src='seta.svg' alt='seta' style={{transform: global.activeBusca ? 'rotate(-90deg)' : 'rotate(90deg)'}}></img>
                             </li>
                         </ul>
                     </nav>
