@@ -11,29 +11,31 @@ const Pokemon = () => {
 
     return (
         <>
-            <Div className='div container'>
+            <Div className='container'>
                 {global.dadosPoke && global.dadosPoke.map((item, index) => {
                     return (
-                        <div key={index}>
+                        <a key={index} href='/'>
                             <div>
-                                <span>{`#${item.id}`}</span>
-                                <img src={item.sprites.other.dream_world.front_default} alt={item.name}>
-                                </img>
-                            </div>
-                            <div>
-                                <span>{item.name}</span>
                                 <div>
-                                    {item.types.map((item, index) => {
-                                        const {bg_color, color} = global.types.find((style) => style.name === item.type.name)
-                                        return (
-                                            <span style={{background: bg_color, color: color}} key={index}>
-                                                {item.type.name}
-                                            </span>
-                                        )
-                                    })}
+                                    <span>{`#${item.id}`}</span>
+                                    <img src={item.sprites.other.dream_world.front_default} alt={item.name}>
+                                    </img>
+                                </div>
+                                <div>
+                                    <span>{item.name}</span>
+                                    <div>
+                                        {item.types.map((item, index) => {
+                                            const {bg_color, color} = global.types.find((style) => style.name === item.type.name)
+                                            return (
+                                                <span style={{background: bg_color, color: color}} key={index}>
+                                                    {item.type.name}
+                                                </span>
+                                            )
+                                        })}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     )
                 })}
             </Div>
