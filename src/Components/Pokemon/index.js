@@ -1,6 +1,7 @@
 import React from 'react'
 import { GlobalContext } from '../GlobalContext'
-import Div from './styles'
+import Div from './styled'
+import { Link } from 'react-router-dom'
 
 const Pokemon = () => {
     const global = React.useContext(GlobalContext)
@@ -14,7 +15,7 @@ const Pokemon = () => {
             <Div className='container'>
                 {global.dadosPoke && global.dadosPoke.map((item, index) => {
                     return (
-                        <a key={index} href='/'>
+                        <Link onClick={() => global.setUrlRoutes(item.name)} to={`/${item.name}`} key={index}>
                             <div>
                                 <div>
                                     <span>{`#${item.id}`}</span>
@@ -35,7 +36,7 @@ const Pokemon = () => {
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     )
                 })}
             </Div>

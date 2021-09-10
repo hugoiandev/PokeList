@@ -3,15 +3,19 @@ import React from 'react'
 import { GlobalStorage } from './Components/GlobalContext';
 import Header from './Components/Header'
 import Pokemon from './Components/Pokemon';
+import { BrowserRouter } from 'react-router-dom'
+import { Routes } from './Routes'
 
-function App() {
+const App = () => {
 
   return (
     <>
-      <GlobalStorage>
-        <Header />
-        <Pokemon />
-      </GlobalStorage>
+      <BrowserRouter>
+        <GlobalStorage>
+          <Header />
+          <Routes />
+        </GlobalStorage>
+      </BrowserRouter>
     </>
   );
 }

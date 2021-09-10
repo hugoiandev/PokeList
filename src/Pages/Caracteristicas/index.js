@@ -1,9 +1,10 @@
 import React from "react";
 
-const Caracteristica = () => {
+const Caracteristica = ({history}) => {
+    console.log(history)
     return (
         <div>
-            Estou aqui
+            <button onClick={() => history.goBack()}>Voltar</button>
         </div>
     )
 }

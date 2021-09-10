@@ -12,6 +12,9 @@ const GlobalStorage = ({children}) => {
     const [statusSelect, setStatusSelect] = React.useState(true)
     const [statusBtn, setStatusBtn] = React.useState(true)
     const elementObs = React.useRef()
+    const [urlRoutes, setUrlRoutes] = React.useState(null)
+    const [selectPoke, setSelectPoke] = React.useState(null)
+    console.log(urlRoutes)
 
     const initObserver = () => {
         const observer = new IntersectionObserver((entries) => {
@@ -102,6 +105,14 @@ const GlobalStorage = ({children}) => {
         fetchApi('https://pokeapi.co/api/v2/pokemon')
 
     }, [])
+
+    React.useEffect(() => {
+        const match = dadosPoke.find((item) => item.name === urlRoutes)
+        setSelectPoke(match)
+
+        console.log(match)
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [urlRoutes])
 
 
     const types = [
@@ -217,7 +228,10 @@ const GlobalStorage = ({children}) => {
             setStatusSelect,
             statusSelect,
             statusBtn,
-            setStatusBtn
+            setStatusBtn,
+            setUrlRoutes,
+            urlRoutes,
+            selectPoke
             }}>
             {children}
         </GlobalContext.Provider>
