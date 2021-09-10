@@ -110,7 +110,6 @@ const GlobalStorage = ({children}) => {
         const match = dadosPoke.find((item) => item.name === urlRoutes)
         setSelectPoke(match)
 
-        console.log(match)
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [urlRoutes])
 
