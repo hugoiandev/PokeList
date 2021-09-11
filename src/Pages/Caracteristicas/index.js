@@ -10,15 +10,7 @@ const Caracteristica = ({history}) => {
     return (
         <Div className='container'>
             <div>
-                <a href='/' onClick={(event) => {
-                    event.preventDefault()
-                    history.goBack()
-                    global.setStatusBtn(true)
-                }}><img alt='seta voltar' src='seta-back.svg'></img></a>
-                {global.selectPoke &&
-                <div>
-                    <img alt={global.selectPoke.name} src={global.selectPoke.sprites.other.dream_world.front_default}></img>
-                </div>}
+                {global.selectPoke && <h1>{global.selectPoke.name}</h1>}
             </div>
         </Div>
     )

@@ -1,22 +1,21 @@
 import styled from "styled-components";
 
 const Div = styled.div`
-    a {
+    div:nth-child(1) {
+        h1 {
+            color: #313131;
+            font-size: 3em;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+    /* a {
         img {
             height: 50px;
             width: 50px;
             transform: rotate(-180deg);
         }
-    }
-    div {
-        div {
-            height: 200px;
-            width: 200px;
-            img {
-                width: 100%;
-            }
-        }
-    }
+    } */
 
 `
 
