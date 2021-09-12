@@ -107,7 +107,7 @@ const GlobalStorage = ({children}) => {
     }, [])
 
     React.useEffect(() => {
-        const match = dadosPoke.find((item) => item.name === urlRoutes)
+        const match = dadosPoke.filter((item) => item.name === urlRoutes)
         setSelectPoke(match)
 
         //eslint-disable-next-line react-hooks/exhaustive-deps

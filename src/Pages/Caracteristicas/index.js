@@ -9,9 +9,27 @@ const Caracteristica = ({history}) => {
     
     return (
         <Div className='container'>
-            <div>
-                {global.selectPoke && <h1>{global.selectPoke.name}</h1>}
-            </div>
+            {global.selectPoke.map((item, index) => {
+                return (
+                    <div key={index}>
+                        <div>
+                            <h1>{item.name}</h1>
+                        </div>
+                        <div>
+                            <div>
+                                <img alt='Pokemon' src={item.sprites.other.dream_world.front_default}></img>
+                            </div>
+                            <div>
+                                <span>Height: {item.height}</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })}
         </Div>
     )
 }
