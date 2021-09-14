@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../Header'
 import { GlobalContext } from '../GlobalContext'
 import Div from './styled'
 import { Link } from 'react-router-dom'
@@ -12,6 +13,7 @@ const Pokemon = () => {
 
     return (
         <>
+            <Header />
             <Div className='container'>
                 {global.dadosPoke && global.dadosPoke.map((item, index) => {
                     return (

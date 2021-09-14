@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react'
 import { GlobalStorage } from './Components/GlobalContext';
-import Header from './Components/Header'
 import { BrowserRouter } from 'react-router-dom'
 import { Routes } from './Routes'
 
@@ -11,7 +10,6 @@ const App = () => {
     <>
       <BrowserRouter>
         <GlobalStorage>
-          <Header />
           <Routes />
         </GlobalStorage>
       </BrowserRouter>
