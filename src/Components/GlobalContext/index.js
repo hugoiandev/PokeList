@@ -14,7 +14,6 @@ const GlobalStorage = ({children}) => {
     const elementObs = React.useRef()
     const [urlRoutes, setUrlRoutes] = React.useState(null)
     const [selectPoke, setSelectPoke] = React.useState(null)
-    console.log(urlRoutes)
 
     const initObserver = () => {
         const observer = new IntersectionObserver((entries) => {
@@ -77,7 +76,6 @@ const GlobalStorage = ({children}) => {
             const response = await fetch(`https://pokeapi.co/api/v2/type/${event}`)
             const json = await response.json()
             const {pokemon} = json
-            console.log(pokemon)
             const length = pokemon.length
             let resJson = []
             for (let i = 0; i < length; i++) {

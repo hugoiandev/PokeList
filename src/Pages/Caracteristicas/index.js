@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 
 const Caracteristica = ({history}) => {
     const global = React.useContext(GlobalContext)
-    //const { sprites, abilities, name, types, stats, height, weight, base_experience} = pokemon
-    console.log(global.selectPoke)
     
     return (
         <Div className='container'>

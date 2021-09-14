@@ -20,7 +20,6 @@ const Buscar = () => {
                         global.setStatusBtn(false)
                         global.setStatusSelect(false)
                         global.fetchSelect(event.target.value)
-                        //global.setStatusObserver(null)
                     }
                     }} defaultValue='All'>
                     <option>All</option>

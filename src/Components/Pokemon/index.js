@@ -6,10 +6,6 @@ import { Link } from 'react-router-dom'
 
 const Pokemon = () => {
     const global = React.useContext(GlobalContext)
-    console.log(global)
-    console.log(global.types.find((item) => {
-        return item.name === 'bug'
-    }))
 
     return (
         <>
