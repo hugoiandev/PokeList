@@ -1,6 +1,6 @@
 import React from 'react'
 import { GlobalContext } from '../GlobalContext'
-import Div from './styles'
+import Div from './styled'
 
 const Buscar = () => {
     const global = React.useContext(GlobalContext)

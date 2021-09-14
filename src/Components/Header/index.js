@@ -1,7 +1,7 @@
 import React from 'react'
 import { GlobalContext } from '../GlobalContext'
 import Buscar from '../Buscar'
-import Topo from './styles'
+import Topo from './styled'
 
 const Header = () => {
     const global = React.useContext(GlobalContext)
