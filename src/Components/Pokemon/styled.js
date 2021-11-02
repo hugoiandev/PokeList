@@ -11,7 +11,6 @@ const Div = styled.div`
         text-decoration: none;
         color: #313131;
         transition: .3s;
-
         &:hover {
             transform: translateY(-10px);
         }

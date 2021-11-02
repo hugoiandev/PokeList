@@ -2,9 +2,16 @@ import styled from "styled-components";
 
 
 const Topo = styled.header`
-
+    
     background: #ffffff;
-    padding: 50px 0 50px 0;
+    padding: 20px 0;
+
+    .header-image {
+        width: 440px;
+        height: 160px;
+        background-image: url("pokemon-logo-header.png");
+        background-size: cover;
+    }
 
     div:nth-child(1) {
         display: flex;
@@ -39,6 +46,7 @@ const Topo = styled.header`
         }
     }
 
+
     div:nth-child(2) {
         display: flex;
         justify-content: center;
@@ -51,10 +59,27 @@ const Topo = styled.header`
                     display: flex;
                     align-items: center;
                     a {
+                        display: flex;
+                        align-items: center;
                         text-decoration: none;
                         font-size: 1.1em;
-                        color: tomato;
+                        color: white;
+                        background-color: tomato;
+                        padding: 10px;
+                        border-radius: 5px;
                     }
+
+                    a:before {
+                        content: "";
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background-image: url('menu-hamburguer.png');
+                        background-size: cover;
+                        margin-right: 5px;
+                        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(69deg) brightness(108%) contrast(101%);
+                    }
+
                     img {
                         height: 15px;
                         width: 15px;
