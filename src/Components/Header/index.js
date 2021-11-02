@@ -12,15 +12,20 @@ const Header = () => {
         <>
             <Topo>
                 <div className='container'>
-                    <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Buscar Pokémon por nome/número'/>
-                    <a onClick={(event) => {
-                        event.preventDefault()
-                        global.setStatusSelect()
-                        global.setDadosPoke([])
-                        global.fetchApi(`https://pokeapi.co/api/v2/pokemon/${elementCurrent.toLowerCase()}`)
-                        global.setStatusBtn(false)
-                        }} href='/'>
-                    </a>
+                    <div class="header-image"></div>
+                    <div class="search-container">
+                        <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Realize a busca por Pokémon pelo nome ou usando o número'>
+                        </input>
+                        <a onClick={(event) => {
+                            event.preventDefault()
+                            global.setStatusSelect()
+                            global.setDadosPoke([])
+                            global.fetchApi(`https://pokeapi.co/api/v2/pokemon/${elementCurrent.toLowerCase()}`)
+                            global.setStatusBtn(false)
+                            }} href='/'>
+                        </a>
+
+                    </div>
                 </div>
                 <div className='busca-avancada container'>
                     <nav>
@@ -29,7 +34,7 @@ const Header = () => {
                                 <a href='/' onClick={(event) => {
                                     event.preventDefault()
                                     global.setActiveBusca(!global.activeBusca)
-                                    }}>Pesquisa Avançada
+                                    }}> Busca Avançada
                                 </a>
                             </li>
                         </ul>
