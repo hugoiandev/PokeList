@@ -5,9 +5,10 @@ const Div = styled.div`
     background: tomato;
     grid-template-columns: 1fr;
     box-sizing: border-box;
-    padding: 0 40px 100px 40px;
+    padding: 20px 40px 30px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+
     div {
         display: grid;
         h3 {
@@ -21,6 +22,19 @@ const Div = styled.div`
             background: #616161;
             color: #fff;
             border-radius: 5px;
+            outline: 0;
+
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background-color: darkgrey;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
         }
     }
 
