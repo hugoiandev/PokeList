@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
 const Div = styled.div`
-    display: grid;
     background: tomato;
-    grid-template-columns: 1fr;
-    box-sizing: border-box;
     padding: 20px 40px 30px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 0 0 10px 10px;
 
     div {
         display: grid;
+
         h3 {
             color: #fff;
         }
+
         select {
             margin-top: 10px;
             font-size: 1.3em;

@@ -1,17 +1,11 @@
 * {
     font-family: 'Nunito', sans-serif;
-}
-
-a, ul, li, h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     background-color: #d8d8d8;
 }
 

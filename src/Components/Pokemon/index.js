@@ -14,14 +14,13 @@ const Pokemon = () => {
                 {global.dadosPoke && global.dadosPoke.map((item, index) => {
                     return (
                         <Link onClick={() => global.setUrlRoutes(item.name)} to={`/${item.name}`} key={index}>
-                            <div>
-                                <div>
-                                    <span>{`#${item.id}`}</span>
-                                    <img src={item.sprites.other.dream_world.front_default} alt={item.name}>
-                                    </img>
+                            <div class="card">
+                                <div class="card-image">
+                                    <span class="poke-name">{item.name}</span>
+                                    <span class="code">{`#${item.id}`}</span>
+                                    <img src={item.sprites.other.dream_world.front_default} alt={item.name} />
                                 </div>
-                                <div>
-                                    <span>{item.name}</span>
+                                <div class="card-content">
                                     <div>
                                         {item.types.map((item, index) => {
                                             const {bg_color, color} = global.types.find((style) => style.name === item.type.name)
