@@ -15,9 +15,6 @@ const Div = styled.div`
         }
         div {
             div:nth-child(1) {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 background: #ffffff;
                 padding: 50px 50px;
                 border-radius: 10px;
@@ -37,7 +34,7 @@ const Div = styled.div`
                 }
             }
             div:nth-child(2) {
-                margin-left: 10px;
+                margin-left: 30px;
                 margin-top: 5px;
                 span {
                     font-size: 1.2em;

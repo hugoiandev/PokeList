@@ -14,7 +14,7 @@ const Header = () => {
                 <div className='container'>
                     <div class="header-image"></div>
                     <div class="search-container">
-                        <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Buscar Pokémon por nome/numero'>
+                        <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Realize a busca por Pokémon pelo nome ou usando o número'>
                         </input>
                         <a onClick={(event) => {
                             event.preventDefault()
@@ -34,7 +34,7 @@ const Header = () => {
                                 <a href='/' onClick={(event) => {
                                     event.preventDefault()
                                     global.setActiveBusca(!global.activeBusca)
-                                    }}>Pesquisa Avançada
+                                    }}> Busca Avançada
                                 </a>
                             </li>
                         </ul>

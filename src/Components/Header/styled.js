@@ -18,7 +18,6 @@ const Topo = styled.header`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        position: relative;
 
         input {
             width: 80%;
@@ -66,7 +65,7 @@ const Topo = styled.header`
                         font-size: 1.1em;
                         color: white;
                         background-color: tomato;
-                        padding: 10px;
+                        padding: 15px;
                         border-radius: 5px;
                     }
 
@@ -77,7 +76,7 @@ const Topo = styled.header`
                         height: 20px;
                         background-image: url('menu-hamburguer.png');
                         background-size: cover;
-                        margin-right: 5px;
+                        margin-right: 10px;
                         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(69deg) brightness(108%) contrast(101%);
                     }
 
