@@ -9,7 +9,7 @@ const Div = styled.div`
     a {
         text-decoration: none;
         color: #313131;
-        transition: .5s;
+        transition: .3s;
         &:hover {
             transform: translateY(-10px);
         }

@@ -12,17 +12,20 @@ const Header = () => {
         <>
             <Topo>
                 <div className='container'>
-                    <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Buscar Pokémon por nome/numero'>
-                    </input>
-                    <a onClick={(event) => {
-                        event.preventDefault()
-                        global.setStatusSelect()
-                        global.setDadosPoke([])
-                        global.fetchApi(`https://pokeapi.co/api/v2/pokemon/${elementCurrent.toLowerCase()}`)
-                        global.setStatusBtn(false)
-                        }} href='/'>
-                        <img src='pesquisar.svg' alt='pesquisar'></img>
-                    </a>
+                    <div class="header-image"></div>
+                    <div class="search-container">
+                        <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Buscar Pokémon por nome/numero'>
+                        </input>
+                        <a onClick={(event) => {
+                            event.preventDefault()
+                            global.setStatusSelect()
+                            global.setDadosPoke([])
+                            global.fetchApi(`https://pokeapi.co/api/v2/pokemon/${elementCurrent.toLowerCase()}`)
+                            global.setStatusBtn(false)
+                            }} href='/'>
+                        </a>
+
+                    </div>
                 </div>
                 <div className='busca-avancada container'>
                     <nav>
@@ -33,7 +36,6 @@ const Header = () => {
                                     global.setActiveBusca(!global.activeBusca)
                                     }}>Pesquisa Avançada
                                 </a>
-                                <img src='seta.svg' alt='seta' style={{transform: global.activeBusca ? 'rotate(-90deg)' : 'rotate(90deg)'}}></img>
                             </li>
                         </ul>
                     </nav>
