@@ -5,7 +5,7 @@ const Div = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 
     a {
         text-decoration: none;
@@ -16,22 +16,9 @@ const Div = styled.div`
             transform: translateY(-10px);
         }
 
-        .card {
-            border: 7px solid #eec711;
-            border-radius: 10px;
-            border-image-slice: 1;
-            border-image-source: linear-gradient(to top right, #ffaf1b, tomato);
-            background-color: #ededed;
-            background-position: 0 0;
-            background-size: 8px 8px;
-        }
-
         .card-image {
             position: relative;
-            background: #ffffff;
-            padding: 25px;
-            margin: 15px;
-            position: relative;
+            padding: 40px;
             border: 5px solid;
             box-shadow: 0 0 10px 0px grey;
             background: url("card-bg.png") no-repeat;
@@ -47,32 +34,33 @@ const Div = styled.div`
                     padding: 5px;
                     font-weight: bold;
                     font-size: 12px;
-                    border-radius: 0 0 0 15px;
+                    border-radius: 0 0 0 10px;
                     color: #fff;
                     background: tomato;
                 }
                 img {
                     height: 120px;
                     width: 120px;
+                    padding: 0 0 5px;
                 }
         }
 
-        .card-content {
-            margin-left: 10px;
-            margin-top: 5px;
+        .poke-type-container {
+            display: inline-flex;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            bottom: 25px;
+            width: 100%;
+            overflow: hidden;
+            filter: drop-shadow(0 0 10px gray);
+        }
 
-            div {
-                margin: 0;
-                margin-top: 5px;
-
-                span {
-                    font-size: .9em;
-                    margin-right: 10px;
-                    padding: 0 15px;
-                    border-radius: 3px;
-                    }
-                }
-            }
+        .poke-type {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 0 15px;
+            text-transform: capitalize;
         }
 
         .poke-name {
