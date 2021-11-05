@@ -12,8 +12,7 @@ const Header = () => {
         <>
             <Topo>
                 <div className='container'>
-                    <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Buscar Pokémon por nome/numero'>
-                    </input>
+                    <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Buscar Pokémon por nome/número'/>
                     <a onClick={(event) => {
                         event.preventDefault()
                         global.setStatusSelect()
@@ -21,7 +20,6 @@ const Header = () => {
                         global.fetchApi(`https://pokeapi.co/api/v2/pokemon/${elementCurrent.toLowerCase()}`)
                         global.setStatusBtn(false)
                         }} href='/'>
-                        <img src='pesquisar.svg' alt='pesquisar'></img>
                     </a>
                 </div>
                 <div className='busca-avancada container'>

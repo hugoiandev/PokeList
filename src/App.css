@@ -1,18 +1,20 @@
 * {
     font-family: 'Nunito', sans-serif;
-}
-
-a, ul, li, h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #d8d8d8;
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(173, 173, 173);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(75, 75, 75);
 }
 
 .container {
@@ -39,11 +41,15 @@ body {
 }
 
 .img-loading {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .loading {
+    width: 50px;
+    height: 50px;
     animation-name: animaLoad;
     animation-timing-function: linear;
     animation-duration: 1s;
@@ -54,5 +60,6 @@ body {
 @keyframes animaLoad {
     to {
         transform: rotate(360deg);
+        transform-origin: 50% 50%;
     }
 }

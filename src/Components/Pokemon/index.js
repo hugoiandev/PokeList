@@ -14,25 +14,20 @@ const Pokemon = () => {
                 {global.dadosPoke && global.dadosPoke.map((item, index) => {
                     return (
                         <Link onClick={() => global.setUrlRoutes(item.name)} to={`/${item.name}`} key={index}>
-                            <div>
-                                <div>
-                                    <span>{`#${item.id}`}</span>
-                                    <img src={item.sprites.other.dream_world.front_default} alt={item.name}>
-                                    </img>
-                                </div>
-                                <div>
-                                    <span>{item.name}</span>
-                                    <div>
-                                        {item.types.map((item, index) => {
+                            <div class="card-image">
+                                <span class="poke-name">{item.name}</span>
+                                <span class="code">{`#${item.id}`}</span>
+                                <div class="poke-type-container">
+                                    {item.types.map((item, index) => {
                                             const {bg_color, color} = global.types.find((style) => style.name === item.type.name)
                                             return (
-                                                <span style={{background: bg_color, color: color}} key={index}>
+                                                <span class="poke-type" style={{background: bg_color, color: color}} key={index}>
                                                     {item.type.name}
                                                 </span>
                                             )
-                                        })}
-                                    </div>
+                                    })}
                                 </div>
+                                <img src={item.sprites.other.dream_world.front_default} alt={item.name} />
                             </div>
                         </Link>
                     )

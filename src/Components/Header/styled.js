@@ -10,36 +10,32 @@ const Topo = styled.header`
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
 
         input {
-            width: 600px;
-            margin: 0 0 0 20px;
+            width: 80%;
             padding: 10px;
-            border-radius: 20px;
+            border-radius: 20px 0 0 20px;
             border: 2px solid #d6d6d6;
-            position: relative;
-            z-index: 1;
             border-right: none;
-            flex: 1;
+            outline: 0;
         }
 
         a {
-            position: relative;
-            left: -20px;
-            z-index: 0;
-            background: tomato;
-            padding: 5px 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-bottom-right-radius: 20px;
-            border-top-right-radius: 20px;
+            height: 42px;
+            width: 80px;
+            background: tomato;
+            border-radius: 0 20px 20px 0;
+        }
 
-            img {
-                height: 30px;
-                width: 30px;
-            }
+        a:before {
+            content: '';
+            height: 30px;
+            width: 30px;
+            background-image: url('pesquisar.svg');
+            background-size: cover;
         }
     }
 
@@ -47,6 +43,7 @@ const Topo = styled.header`
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        
         nav {
             ul {
                 li {
