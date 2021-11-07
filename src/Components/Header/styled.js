@@ -6,7 +6,6 @@ const Topo = styled.header`
     background: #ffffff;
     padding: 20px 0;
 
-
     .header-image {
         width: 440px;
         height: 160px;
