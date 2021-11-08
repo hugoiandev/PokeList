@@ -8,7 +8,7 @@ const Buscar = () => {
     return (
         <Div className='container'>
             <div>
-                <h3>Busca por tipo</h3>
+                <h3>Busca por habilidade</h3>
                 <select onChange={(event) => {
                     global.setDadosPoke([])
                     if (event.target.value === 'All') {

@@ -14,8 +14,7 @@ const Div = styled.div`
                 text-transform: capitalize;
                 text-align: center;
                 color: #313131;
-                margin-bottom: 40px;
-                margin-top: 30px;
+                margin-bottom: 20px;
                 @media (max-width: 700px) {
                     font-size: 2em;
                 }
@@ -33,7 +32,7 @@ const Div = styled.div`
             }
             .div-img {
                 padding: 20px;
-                background: #A4A4A4;
+                background: #ffffff;
                 border-radius: 15px;
                 img {
                     width: 100%;
@@ -43,45 +42,47 @@ const Div = styled.div`
             .div-attr {
                 border-radius: 15px;
                 padding: 20px;
-                background: #30A7D7;
+                background: #f6bd20;
                 div {
-                    background: #A4A4A4;
+                    background: #ffffff;
                     padding: 10px;
                     border-radius: 10px;
                     margin-bottom: 20px;
                     h3 {
                         font-size: 1.3em;
-                        font-weight: normal;
-                        color: #ffffff;
+                        font-weight: 700;
+                        color: #de9400;
                     }
                     span {
                         font-size: 1.5em;
                         color: #313131;
+                        font-weight: 600;
                     }
                 }
             }
             .div-stats {
                 border-radius: 15px;
                 padding: 20px;
-                background: #30A7D7;
+                background: #ffa439;
                 h2 {
                     color: #313131;
                 }
                 div {
                     margin-top: 20px;
                     div {
-                        background: #A4A4A4;
+                        background: #ffffff;
                         padding: 10px;
                         border-radius: 10px;
                         h3 {
                             text-transform: capitalize;
                             font-size: 1.3em;
-                            font-weight: normal;
-                            color: #ffffff;
+                            font-weight: 700;
+                            color: #ffa439;
                         }
                         span {
                             font-size: 1.5em;
                             color: #313131;
+                            font-weight: 600;
                         }
                     }
                 }
