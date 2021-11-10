@@ -12,8 +12,10 @@ const Header = () => {
         <>
             <Topo>
                 <div className='container'>
-                    <div class="header-image"></div>
-                    <div class="search-container">
+                    <div className="header-image">
+                        <img alt='Logo Pokemon' src='pokemon-logo-header.png' />
+                    </div>
+                    <div className="search-container">
                         <input onChange={(event) => setElementCurrent(event.target.value)} type='text' className='buscar' placeholder='Realize a busca por Pokémon pelo nome ou usando o número'>
                         </input>
                         <a onClick={(event) => {

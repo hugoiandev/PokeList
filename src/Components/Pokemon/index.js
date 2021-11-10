@@ -14,14 +14,14 @@ const Pokemon = () => {
                 {global.dadosPoke && global.dadosPoke.map((item, index) => {
                     return (
                         <Link onClick={() => global.setUrlRoutes(item.name)} to={`/${item.name}`} key={index}>
-                            <div class="card-image">
-                                <span class="poke-name">{item.name}</span>
-                                <span class="code">{`#${item.id}`}</span>
-                                <div class="poke-type-container">
+                            <div className="card-image">
+                                <span className="poke-name">{item.name}</span>
+                                <span className="code">{`#${item.id}`}</span>
+                                <div className="poke-type-container">
                                     {item.types.map((item, index) => {
                                             const {bg_color, color} = global.types.find((style) => style.name === item.type.name)
                                             return (
-                                                <span class="poke-type" style={{background: bg_color, color: color}} key={index}>
+                                                <span className="poke-type" style={{background: bg_color, color: color}} key={index}>
                                                     {item.type.name}
                                                 </span>
                                             )

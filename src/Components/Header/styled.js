@@ -7,10 +7,11 @@ const Topo = styled.header`
     padding: 20px 0;
 
     .header-image {
-        width: 440px;
+        max-width: 440px;
         height: 160px;
-        background-image: url("pokemon-logo-header.png");
-        background-size: cover;
+        img {
+            width: 100%;
+        }
     }
 
     div:nth-child(1) {
