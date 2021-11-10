@@ -8,9 +8,25 @@ Este projeto foi desenvolvido com afins de praticar o meu conhecimento adquirido
 <br>
 
 ![Gif projeto](https://media.giphy.com/media/aHX470SCiZl4jO5ufZ/giphy.gif)
+<br>
+<br>
+
+## Fotos
+![](https://i.imgur.com/oqxXEaC.png)
+![](https://i.imgur.com/rBUkK4K.png)
+![](https://i.imgur.com/0qIiLwP.png)
+![](https://i.imgur.com/PY3OSd9.png)
+<br>
+<br>
+
 ## Tecnologias e bibliotecas usadas
 - React
 - React dom
 - React router dom
 - Styled components
 <br>
+<br>
+
+## Hospedagem
+Este projeto encontra-se hospedado na plataforma Vercel <br>
+Link: [Click Aqui](https://poke-list-pi.vercel.app/)
