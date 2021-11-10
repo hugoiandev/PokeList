@@ -25,7 +25,6 @@ Este projeto foi desenvolvido com afins de praticar o meu conhecimento adquirido
 - React router dom
 - Styled components
 <br>
-<br>
 
 ## Hospedagem
 Este projeto encontra-se hospedado na plataforma Vercel <br>
