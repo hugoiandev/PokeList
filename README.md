@@ -19,7 +19,7 @@ Este projeto foi desenvolvido com afins de praticar o meu conhecimento adquirido
 <br>
 <br>
 
-## Tecnologias e bibliotecas usadas
+## Tecnologias e bibliotecas utilizadas
 - React
 - React dom
 - React router dom
